@@ -1,8 +1,10 @@
+import React from 'react';
+
 import "./ExpenseItem.css";
-import Card from './Card';
+import Card from '../UI/Card';
 import ExpenseDate from "./ExpenseDate";
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   //props ile data tasiyoruz.
   //passing data tam olarak nasil calisti anlamadim. ( react components pass data)
 
