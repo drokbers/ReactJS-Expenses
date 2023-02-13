@@ -1,5 +1,7 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import Expenses from "./components/Expenses/Expenses";
+import ExpensesFilter from "./components/Expenses/ExpensesFilter";
+import NewExpense from "./components/NewExpenses/NewExpenses";
 
 function App() {
 
@@ -26,9 +28,15 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = expense => {
+    console.log('in app');
+    console.log(expense);
+  }
   return (
     <div>
-      <h2>Let's get started!</h2>
+     
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenses} />   
     </div>
     // expenses verileri componente yollandi. item seklinde
