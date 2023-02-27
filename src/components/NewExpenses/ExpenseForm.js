@@ -54,7 +54,7 @@ const ExpenseForm = (props) => {
     event.preventDefault(); //Bu fonksiyon çağrıldığında oluşan eventin işlevini geçersiz kılar. sumbitin request atmasini engelliyoruz
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
     props.onSaveExpenseData(expenseData);
@@ -100,6 +100,8 @@ const ExpenseForm = (props) => {
         <button type="submit" onChange={sumbitHandler}>
           Add Expense
         </button>
+        <button type="button" onClick= {props.onSection}>Cancel</button>
+
       </div>
     </form>
   );

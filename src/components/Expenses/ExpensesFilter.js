@@ -1,13 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
 import "./ExpensesFilter.css";
 
 const ExpensesFilter = (props) => {
+
+
+
+
  
 
   const filterYearHandler = (event) => {
-    console.log(event.target.value);
+    
     props.onChangeFilter(event.target.value);
+   
+    
   };
   return (
     <div className="expenses-filter">
@@ -25,3 +31,6 @@ const ExpensesFilter = (props) => {
 };
 
 export default ExpensesFilter;
+
+
+ 
